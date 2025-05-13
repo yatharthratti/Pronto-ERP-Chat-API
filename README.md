@@ -1,0 +1,3 @@
+This project is a Python-based FastAPI application that provides a chat interface to query the Pronto ERP system. It leverages LangChain and LangGraph to create an agent that processes natural language queries, such as "How many sales orders are there in the 2M territory?", by interacting with the Pronto ERP API. The application supports inventory and sales-related queries, authenticating with the API and returning structured responses.
+
+The project is structured as a Python package with a FastAPI server, a modular agent package for tool and agent logic, and environment variable management for secure API key storage. It is designed to handle complex queries while mitigating issues like API rate limits.
