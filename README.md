@@ -1,10 +1,10 @@
-# 🤖 Pronto ERP Agentic Chatbot using Groq LLM & FastAPI
+#  Pronto ERP Agentic Chatbot using Groq LLM & FastAPI
 
 This project is an intelligent agent interface designed to interact with **Pronto ERP** systems using natural language queries. It combines the power of **Groq’s ultra-fast LLM inference**, **LangGraph's tool-based agent architecture**, and the simplicity of **FastAPI** to deliver real-time, accurate ERP data through an AI chatbot interface.
 
 ---
 
-## 🧠 Project Overview
+## Project Overview
 
 At its core, this system enables users to **query ERP data conversationally**. Instead of navigating through complex ERP dashboards or writing manual reports, users can simply type requests like:
 
@@ -16,7 +16,7 @@ The system processes the input, intelligently determines which tools (APIs) to c
 
 ---
 
-## 🔧 Architecture & Flow
+##  Architecture & Flow
 
 1. **User Input**
    A message is sent to the `/chat` endpoint containing a natural language prompt.
@@ -36,31 +36,31 @@ The system processes the input, intelligently determines which tools (APIs) to c
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
-### 🔄 Real-time Streaming API
+###  Real-time Streaming API
 
 * Supports SSE for progressive token-level streaming response.
 * Instant feedback and fluid interaction.
 
-### 🧰 LangGraph + LangChain Tool Agent
+###  LangGraph + LangChain Tool Agent
 
 * Structured tool execution using `create_react_agent`.
 * Tools defined with LangChain’s `@tool` decorator.
 
-### ⚡ Groq API Integration
+###  Groq API Integration
 
 * Utilizes Groq’s blazing-fast inference for the Qwen-32B LLM.
 * Fast responses even with large models.
 
-### 🔗 ERP Toolset
+###  ERP Toolset
 
 * Interfaces with **Pronto Cloud’s ERP REST APIs**.
 * Automatically handles login, access tokens, headers, and payload formatting.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```plaintext
 .
@@ -74,7 +74,7 @@ The system processes the input, intelligently determines which tools (APIs) to c
 
 ---
 
-## 🧰 ERP Tools Implemented
+##  ERP Tools Implemented
 
 | Tool Name             | Purpose                                           |
 | --------------------- | ------------------------------------------------- |
@@ -89,7 +89,7 @@ Each tool calls a specific Pronto ERP REST endpoint and formats the response bef
 
 ---
 
-## 🖥️ Usage Instructions
+##  Usage Instructions
 
 ### 1. Clone and Install Dependencies
 
@@ -143,7 +143,7 @@ curl -X POST http://localhost:8001/chat \
 
 ---
 
-## 🧠 Behind the Scenes
+## Behind the Scenes
 
 * **Token Streaming**: Utilizes `async def` and `yield` in FastAPI to support server-sent events.
 * **Tool Reasoning**: LangGraph allows the agent to reason over a toolset and dynamically pick which function to call.
@@ -151,7 +151,7 @@ curl -X POST http://localhost:8001/chat \
 
 ---
 
-## 🛡️ Security Notes
+##  Security Notes
 
 * The current setup assumes testing or internal use. In production:
 
@@ -161,11 +161,11 @@ curl -X POST http://localhost:8001/chat \
 
 ---
 
-## 🧪 Future Improvements
+##  Future Improvements
 
-* ✅ Add memory/context window for conversation continuity
-* ✅ Dockerize for easy deployment
-* 🔄 Add logging, monitoring, and retry logic for API tools
-* 🌐 Web UI for real-time testing
+*  Add memory/context window for conversation continuity
+*  Dockerize for easy deployment
+*  Add logging, monitoring, and retry logic for API tools
+*  Web UI for real-time testing
 * 🔐 OAuth/token refresh handling for Pronto APIs
 * 💬 Multilingual support and translation
