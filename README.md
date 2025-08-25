@@ -167,5 +167,5 @@ curl -X POST http://localhost:8001/chat \
 *  Dockerize for easy deployment
 *  Add logging, monitoring, and retry logic for API tools
 *  Web UI for real-time testing
-* 🔐 OAuth/token refresh handling for Pronto APIs
-* 💬 Multilingual support and translation
+*  OAuth/token refresh handling for Pronto APIs
+*  Multilingual support and translation
